@@ -1,1 +1,0 @@
-# hbdsamprikta.github.io
