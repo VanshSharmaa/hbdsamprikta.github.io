@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HBDS</title>
+</head>
+<body background="pic1.jpg"> <br>
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+body {
+background-size: contain;
+opacity: 2;
+}
+@keyframes text {
+            0% {
+                color: rgb(255, 255, 255);
+                margin-bottom: -20px;
+            }
+  
+            15% {
+                letter-spacing: 15px;
+                margin-bottom: -20px;
+            }
+  
+            40% {
+                letter-spacing: 8px;
+                margin-bottom: -20px;
+            }
+        }
+@keyframes ani {
+  0%   {background-color: rgba(255, 123, 0, 0.351);}
+  25%  {background-color: rgba(255, 0, 0, 0.351);}
+  50%  {background-color: rgba(0, 208, 255, 0.351);}
+  100% {background-color: rgba(255, 0, 140, 0.351);}
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+.text-rainbow-animation {
+	margin: 70px;
+	text-align: center;
+  font-family:arial black;
+  font-size:400%;
+  background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 35s linear infinite;
+}
+
+@keyframes rainbow-animation {
+    to {
+        background-position: 1500vh;
+    }
+}
+h2 {
+	margin: 20px;
+	text-align: center;
+	font-family: cursive;
+	font-weight: bold;
+	font-size: 200%;
+	color: rgb(255, 255, 255);
+	animation: text 5s;
+}
+
+.glow-on-hover {
+	text-align: center;
+    width: 220px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+	animation: waviy 1s infinite;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+      }
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+section {
+	position: relative;
+	padding: 15px;
+	width: 100%;
+}
+p {
+position: relative;
+clear: right;
+}
+.div {
+	position: relative;
+	background-color: rgba(250, 223, 255, 0.451);
+	border: 1px rgb(255, 255, 255);
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+
+}
+	.sub1 {	
+	float: center;
+	color: rgb(0, 0, 0);
+	width: 100%;
+	padding: 5px;
+	margin: 0px;
+	border: 1px rgb(120, 109, 124);
+	text-align: center;
+	font-size: 150%;
+	font-weight: bold;
+	background-color: rgba(205, 170, 170, 0.178);
+	animation: ani 10s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	}
+	.sub2 {
+		float: center;
+		color: rgb(6, 6, 6);
+		width: 100%;
+		padding: 5px;
+		margin: 0px;
+		border: 1px grey;
+		text-align: center;
+		font-size: 150%;
+		font-weight: bold;
+		background-color: rgba(249, 249, 249, 0.215);
+		animation: ani 10s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.sub3 {
+		color: black;
+		float: center;
+		width: 100%;
+		padding: 5px;
+		margin: 0px;
+		border: 1px grey;
+		text-align: center;
+		font-size: 150%;
+		font-weight: bold;
+		background-color: rgba(255, 255, 255, 0.199);
+		animation: ani 10s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.content {
+		padding: 5px;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.574);
+		font-family: cursive;
+		color: rgb(0, 0, 0);
+		margin: 0px;
+		height: 200px;
+		overflow: auto;
+		font-size: 124%;
+		
+
+	}
+
+	.row {
+		width: 90%;
+	}
+
+	@media (min-width: 992px){
+		.column-lg-4 {
+			float: left;
+			width: 33.33%;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 991px){
+		.colmn-md-6 {
+			float: left;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.colmn-md-12 {
+			float: left;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	@media (max-width: 767px){
+		.colmn-sm-12 {
+			float: left;
+			width: 100%;
+		}
+	}
+	
+</style>
+<body >
+  <div class="text-rainbow-animation">HAPPY BIRTHDAY SAMPRIKTA</div>
+  <div>
+      <h2>Made a playlist for ya</h2>
+  <a href='https://open.spotify.com/playlist/0nvTcZTDpn3MqSHhghNZJq?si=2e57619767824d41'>
+	<button class="glow-on-hover" type="button" style="left:45%">Spotify Playlist</button>
+</a>
+  </div>
+	<section class="column-lg-4 colmn-md-6 colmn-sm-12">
+		<div class="div">
+		<p class="sub1">Keep Smiling</p>
+		<p class="content">Because of your smile, you make life more beautiful. Wishing you a happy and fruitful life. Hope you overcome all the hard times with strength and with that damn breathtaking smile of yours.
+		</p>
+
+		</div>
+	</section>
+	<section class="column-lg-4 colmn-md-6 colmn-sm-12">
+		<div class="div">
+		<p class="sub2">Wishing you a peaceful life</p>
+		<p class="content">As you light up the sky like the moon does in a dark night. Maybe some peace will come to me too. Wishing you all the peace in the world. Your efforts are always appreciated and the person you have become today is someone I am proud of.
+		</p>
+		</div>
+	</section>
+	<section class="column-lg-4 colmn-md-12 colmn-sm-12">
+	<div class="div">
+	<p class="sub3">Happy Birthday
+	</p>
+	<p class="content">To someone who has helped me find myself. Someone who deserves the world. Stay strong and I wish you have a wonderful life ahead. Cheers to you for achieving everything you wish for.</p>
+</div>
+
+</body>
+</html>
